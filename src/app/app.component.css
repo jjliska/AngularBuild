@@ -47,75 +47,95 @@ p {
           drop-shadow(1px -1px 2px #242424)
           drop-shadow(-1px -1px 2px #242424);
 }
-
 .dropbtn{
   transition-duration: .1s;
-  min-width: 100px;
+  min-width: 60px;
   min-height: 60px;
-  background-color: #ca5825;
+  background-color: #121212;
   color: white;
-  padding: 16px;
+  padding: 12px;
   font-size: 16px;
-  width: 12vh;
+  width: 6vh;
   height: 6vh;
   border: none;
   cursor: pointer;
 }
-
 .dropdown{
   margin: 0 4vh;
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content{
   display: none;
-  position: absolute;
   background-color: #ca5825;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
 }
-
+.menuIcon{
+  border-radius: 2px;
+  width: 35px;
+  height: 4px;
+  background-color: #ca5825;
+  margin: 5px 0;
+}
 .optionbtn{
   background-color: #ca5825;
-  transition-duration: .1s;
   width: 12vh;
   min-width: 100px;
   min-height: 60px;
-  overflow: hidden;
   margin: 0px;
   padding: 12px 16px;
-  text-decoration: none;
-  display: block;
   color: white;
   font-size: 16px;
   border: none;
   cursor: pointer;
 }
-
-.optionbtn:hover{
-  background-color: #c04926;
-}
 .dropdown:hover .dropdown-content{
+  position: absolute;
+  left: auto;
+  right: 0;
   display: block;
 }
-.dropdown:hover .dropbtn{
+.optionbtn:hover{
+  transition-duration: .1s;
   background-color: #c04926;
+}
+.dropdown:hover .menuIcon{
+  background-color: #c04926;
+  box-shadow: 2px 2px 2px 0px rgba(202,88,37,0.5);
 }
 .content-wrapper{
   margin-top: 10vh;
-  width: 100%;
   height: 90vh;
   align-items: center;
+  overflow-y:auto;
 }
 .content{
   display: flex;
   background-color: #282828;
   color: #ffffff;
-  min-width: 720px;
-  max-width: 1280px;
-  margin: 82px auto 32px;
   padding: 20px;
   flex-direction: column;
   align-items: center;
 }
+.content-wrapper::-webkit-scrollbar {
+    width: 6px;
+    overflow-y: scroll;
+    background: grey;
+    box-shadow: inset 0 0 4px #282828;
+}
+.content-wrapper::-webkit-scrollbar-thumb {
+    background: #ca5825;
+    border-radius: 10px;
+}
+
+/*
+Color Pallet
+#ffffff - white
+#d3d3d3 - white-grey
+#404040 - light-grey
+#282828 - mid-grey
+#242424 - mid-grey - img-hover
+#121212 - dark-grey
+#92d293 - calm-green - active/completed
+#fffcbb - calm-yellow
+*/

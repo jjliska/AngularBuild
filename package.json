@@ -22,7 +22,9 @@
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",
     "mat-table-exporter": "^1.2.5",
+    "npm-check": "^5.9.2",
     "package": "^1.0.1",
+    "package.json": "^2.0.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"

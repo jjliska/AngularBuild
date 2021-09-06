@@ -9,9 +9,9 @@ export class AppComponent {
   isShow = false;
 
   toggleToDo(){
-    this.isShow = false;
+    this.isShow = true;
   }
   toggleUsers(){
-    this.isShow = true;
+    this.isShow = false;
   }
 }

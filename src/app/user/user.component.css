@@ -1,6 +1,36 @@
 table{
-    width: 100%;
+ width: 70vh;
+ min-width: 720px;
+ max-width: 1280px;
 }
-th.mat-sort-header-sorted {
-    color: black;
-  }
+.mat-cell{
+  background-color: #404040;
+  color: #d3d3d3;
+}
+.mat-column-id {
+  flex: 0 0 10% !important;
+  width: 10% !important;
+}
+.mat-column-name {
+  flex: 0 0 28% !important;
+  width: 28% !important;
+}
+.mat-column-email {
+  flex: 0 0 48% !important;
+  width: 48% !important;
+}
+.mat-column-status {
+  flex: 0 0 14% !important;
+  width: 14% !important;
+  padding-left: 20px;
+  text-align: left !important;
+  color: #000000;
+}
+.mat-header-cell{
+  background-color: #121212;
+  color: #ffffff;
+}
+mat-paginator{
+  background-color: #121212;
+  color: #ffffff;
+}

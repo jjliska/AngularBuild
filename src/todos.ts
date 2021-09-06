@@ -1,6 +1,6 @@
 export interface ToDos {
   meta: Meta;
-  data?: (DataEntity)[] | null;
+  data: (DataEntity)[];
 }
 export interface Meta {
   pagination: Pagination;
@@ -13,9 +13,9 @@ export interface Pagination {
   links: Links;
 }
 export interface Links {
-  previous?: null;
+  previous?: string;
   current: string;
-  next: string;
+  next?: string;
 }
 export interface DataEntity {
   id: number;

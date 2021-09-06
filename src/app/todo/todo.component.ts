@@ -32,9 +32,13 @@ export class ToDoComponent implements OnInit {
 
   // First Previous Next Last button event handler
   public pageChange(event?: any){
+    // Previous Page
     if(event.previousPageIndex == (event.pageIndex+1)) this.getAllReports(this.prevLink);
+    // Next Page
     else if(event.previousPageIndex == (event.pageIndex-1)) this.getAllReports(this.nextLink);
+    // Last Page
     else if(event.pageIndex+1 == this.totPages) this.getAllReports(this.url+"?page="+this.totPages.toString());
+    // First Page
     else if(event.pageIndex == 0)this.getAllReports(this.url+"?page=1");
   }
 
@@ -42,11 +46,13 @@ export class ToDoComponent implements OnInit {
   public getAllReports(url: string){
     let resp: any = this.hero.getAPI(url);
     resp.subscribe(report=>{
-        this.dataSource = report.data;
-        this.length = report.meta.pagination.total;
-        this.totPages = report.meta.pagination.pages;
-        this.prevLink = report.meta.pagination.links.previous;
-        this.nextLink = report.meta.pagination.links.next;
+      // Data Object
+      this.dataSource = report.data;
+      // Paginator references
+      this.length = report.meta.pagination.total;
+      this.totPages = report.meta.pagination.pages;
+      this.prevLink = report.meta.pagination.links.previous;
+      this.nextLink = report.meta.pagination.links.next;
     });
   }
 }

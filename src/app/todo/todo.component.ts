@@ -31,7 +31,7 @@ export class ToDoComponent implements OnInit {
   }
 
   // First Previous Next Last button event handler
-  public pageChange(event?: PageEvent){
+  public pageChange(event?: any){
     if(event.previousPageIndex == (event.pageIndex+1)) this.getAllReports(this.prevLink);
     else if(event.previousPageIndex == (event.pageIndex-1)) this.getAllReports(this.nextLink);
     else if(event.pageIndex+1 == this.totPages) this.getAllReports(this.url+"?page="+this.totPages.toString());
@@ -40,7 +40,7 @@ export class ToDoComponent implements OnInit {
 
   // Gets and sets table data from the API
   public getAllReports(url: string){
-    let resp = this.hero.getTodos(url);
+    let resp: any = this.hero.getTodos(url);
     resp.subscribe(report=>{
       try{
         this.dataSource = report.data;

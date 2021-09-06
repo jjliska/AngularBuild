@@ -12,8 +12,8 @@ table{
   width: 10% !important;
 }
 .mat-column-title {
-  word-wrap: break-word !important;
-  white-space: unset !important;
+  word-wrap: break-word;
+  white-space: unset;
   flex: 0 0 60% !important;
   width: 60% !important;
   hyphens: auto;
@@ -26,7 +26,7 @@ table{
   flex: 0 0 16% !important;
   width: 16% !important;
   padding-left: 20px;
-  text-align: left !important;
+  text-align: left;
   color: #000000;
 }
 .mat-header-cell{

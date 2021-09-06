@@ -1,21 +1,17 @@
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 8px 0;
-}
-
-p {
-  margin: 0;
-}
-
+/*
+Color Pallet
+#ffffff - white
+#d3d3d3 - white-grey
+#404040 - light-grey
+#282828 - mid-grey
+#242424 - mid-grey - img-hover
+#121212 - dark-grey
+#92d293 - calm-green - active/completed
+#fffcbb - calm-yellow - inactive/pending
+*/
 .spacer{
   flex: 1;
 }
-
 .toolbar{
   position: absolute;
   top: 0;
@@ -28,13 +24,12 @@ p {
   background-color: #121212;
   color: white;
   font-weight: 600;
-  box-shadow: 0 4px 8px 0 rgba(24, 24, 24, 1), 10px 6px 20px 0 rgba(24, 24, 24, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(24, 24, 24, 1),
+              10px 6px 20px 0 rgba(24, 24, 24, 0.2);
 }
-
 .toolbar img{
   margin: 0 4vh;
 }
-
 .toolbar img:hover{
   padding: 0;
   transition-duration: .04s;
@@ -111,8 +106,6 @@ p {
 }
 .content{
   display: flex;
-  background-color: #282828;
-  color: #ffffff;
   padding: 20px;
   flex-direction: column;
   align-items: center;
@@ -127,15 +120,3 @@ p {
     background: #ca5825;
     border-radius: 10px;
 }
-
-/*
-Color Pallet
-#ffffff - white
-#d3d3d3 - white-grey
-#404040 - light-grey
-#282828 - mid-grey
-#242424 - mid-grey - img-hover
-#121212 - dark-grey
-#92d293 - calm-green - active/completed
-#fffcbb - calm-yellow
-*/

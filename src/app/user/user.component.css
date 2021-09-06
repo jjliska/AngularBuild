@@ -1,7 +1,7 @@
 table{
- width: 70vh;
- min-width: 720px;
- max-width: 1280px;
+  width: 70vh;
+  min-width: 720px;
+  max-width: 1280px;
 }
 .mat-cell{
   background-color: #404040;
@@ -23,7 +23,7 @@ table{
   flex: 0 0 14% !important;
   width: 14% !important;
   padding-left: 20px;
-  text-align: left !important;
+  text-align: left;
   color: #000000;
 }
 .mat-header-cell{

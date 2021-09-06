@@ -1,3 +1,4 @@
+//Hero service is an HTTP call
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -8,11 +9,7 @@ export class HeroService {
 
   constructor(private http:HttpClient) { }
 
-  public getTodos(url: string){
-    return  this.http.get(url);
-  }
-
-  public getUsers(url: string){
+  public getAPI(url: string){
     return  this.http.get(url);
   }
 }

@@ -1,8 +1,9 @@
+//todo.component.ts and user.component.ts are redundant and could be merged into a single component
+//Css and html are fairly similar but different enough to justify being seperate components
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { HeroService } from '../hero.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-
 
 @Component({
   selector: 'app-user',
@@ -39,18 +40,13 @@ export class UserComponent implements OnInit {
 
   // Gets and sets table data from the API
   public getAllReports(url: string){
-    let resp: any = this.hero.getUsers(url);
+    let resp: any = this.hero.getAPI(url);
     resp.subscribe(report=>{
-      try{
         this.dataSource = report.data;
         this.length = report.meta.pagination.total;
         this.totPages = report.meta.pagination.pages;
         this.prevLink = report.meta.pagination.links.previous;
         this.nextLink = report.meta.pagination.links.next;
-      }
-      catch(er){
-        console.log(er);
-      }
     });
   }
 }

@@ -1,6 +1,6 @@
 export interface Users {
-  meta: Meta;
-  data: (DataEntity)[];
+  meta: any | Meta;
+  data: any | (DataEntity)[];
 }
 export interface Meta {
   pagination: Pagination;

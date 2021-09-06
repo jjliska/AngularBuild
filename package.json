@@ -23,6 +23,7 @@
     "@angular/router": "~8.1.2",
     "mat-table-exporter": "^1.2.5",
     "npm-check": "^5.9.2",
+    "npm-check-updates": "^11.8.5",
     "package": "^1.0.1",
     "package.json": "^2.0.1",
     "rxjs": "~6.4.0",

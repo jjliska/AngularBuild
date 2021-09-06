@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { HeroService } from '../hero.service';
-import { ToDos } from 'src/todos';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 
@@ -20,9 +19,9 @@ export class ToDoComponent implements OnInit {
   constructor(private hero:HeroService){}
 
   //Table constructors
-  ELEMENT_DATA : ToDos[];
+  ELEMENT_DATA : any;
   displayedColumns: string[] = ['user_id', 'title', 'due_on', 'status'];
-  dataSource = new MatTableDataSource<ToDos>(this.ELEMENT_DATA);
+  dataSource = new MatTableDataSource(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
